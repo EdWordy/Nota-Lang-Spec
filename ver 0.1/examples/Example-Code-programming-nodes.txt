@@ -1,0 +1,59 @@
+> Programming Nodes 
+
+// Below are a few complex data structures for use with NOTA programs
+
+// HINT: Keywords MUST be capitalized
+
+---
+
+>>> Function
+
+FUNC NameOfFunction;
+  code code code code code code 
+  code code code code code code
+  code code code code code code 
+  code code code code code code
+
+// Lines don't need to be flush, only indented by two spaces
+
+---
+
+>>> Propositional Action
+
+PACT Propositional Action 1;
+
+// pronounced "p-act"
+
+---
+
+>>> Conditional Action
+
+CACT: CONDITIONAL Action 1;
+->CONDITION 1: if X is Y then do Z
+
+// pronounced "c-act"
+
+---
+
+>>>> Propositional Algorithm 
+
+PALGO NameOfAlgorithm;
+STEP 1: Propositional Action 1
+STEP 2: ...
+STEP N: Propositional Action n
+
+// pronounced "p-algo"
+
+---
+
+>>>> Conditional Propositions Algorithm
+
+CPROP NameOfAlogrithm;
+STEP 1: Propositional Action 1
+->CONDITION 1: if X is Y then do Z
+...
+STEP N: Propositional Action n
+->CONDITION 1: if U is V then do W
+
+// pronounced "c-prop"
+

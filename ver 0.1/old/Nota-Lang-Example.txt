@@ -1,0 +1,70 @@
+> MONTHLY SUBSCRIPTIONS
+
+! MONTHLY TOTAL = PERSONAL TOTAL + BUSINESS TOTAL;
+
+>> PERSONAL 
+
+>>> BANKING
+
+#] “String” : DATATYPE;
+1] CHEQUING ACCOUNT FEES: $9.99 CAD per month
+
+! SUBTOTAL 1 = 1;
+
+=[ SUBTOTAL 2 ];
+
+>>> SUBSCRIPTIONS
+
+#] “String”: DATATYPE;
+1] AMAZON PRIME: $11.09 CAD per month
+2] GITHUB: $4.0 USD per month 
+3] NETFLIX: $18.30 CAD per month 
+
+! SUBTOTAL 2 = 1 + 2 + 3;
+
+=[ SUBTOTAL 2 ];
+
+! PERSONAL TOTAL = SUBTOTAL 1 + SUBTOTAL 2;
+
+=[ PERSONAL TOTAL ];
+
+---
+
+>> GENERAL BIZ
+
+>>> BITFORGE GAMES
+
+A] RBC Digital Choice Banking Account: $5.0 CAD per month
+
+! SUBTOTAL D = A;
+
+=[ SUBTOTAL D ];
+
+>>> PI R&D
+
+A] null: 0
+
+! SUBTOTAL E = A;
+
+=[ SUBTOTAL E ];
+
+---
+
+! BIZ TOTAL = SUBTOTAL D + E;
+
+BIZ TOTAL:
+=[ BIZ TOTAL ];
+
+---
+
+MONTHLY TOTAL:
+=[ MONTHLY TOTAL ]
+
+---
+
+// I just realized I can use this document as an example for a markup language (or a notational language, as I've taken to calling these types of langs).
+// Which sort of functions like a shift key, as described by Petzold in Code as an escaped sequence, which I've only read the first couple chapters of but which is v good.
+// I'm digging it. I wonder if it needs to be interpreted or compiled to run proper. I'd also need to write an editor for the language, and I'm really thinking hard about doing this.
+
+// I would probably use something like Python 3 or whatever, as it seems to fit my needs. TKinter would be needed iirc.
+// I'm working on the outline for now, but I'll have to rewrite it to explain how it works with graphic design and arrows for pointing

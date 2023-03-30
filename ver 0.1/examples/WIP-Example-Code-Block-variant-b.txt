@@ -1,0 +1,13 @@
+>>> Code Linked Block
+
+Escaped Sequence;
+Body block 1
+code here
+|
+Body block 2
+code here
+|
+Body block 3
+code here
+
+// TODO: finish the function signifier i.e. the Escaped sequence and preceding identifier

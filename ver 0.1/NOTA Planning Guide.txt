@@ -1,0 +1,46 @@
+
+> NOTES
+
+>>> Entry 1:
+
+// I just realized I can use this document [examples\Lang-Example-A.txt] as an example for a markup language (or a notational language, as I've taken to calling these types of langs).
+// Which sort of functions like a shift key, as described by Petzold in Code as an escaped sequence, which I've only read the first couple chapters of but which is v good.
+// It's safe to say I'm digging it. I wonder if such a lang needs to be interpreted or compiled to run proper. I'd also need to write an editor for the language, 
+// and I'm realllllllly thinking hard about doing this.
+
+// tho I could probably use something like Python 3 instead or whatever, as it seems to fit my needs. TKinter would be needed iirc ofc.
+// I'm working on the outline for now, but I'll have to rewrite it to explain how it works with graphic design and arrows pointing at
+// how it works and what is what in terms of notation.
+
+---
+
+>>> Entry 2:
+
+// I'm thinking this whole NOTA thing can be planned fairly easily, with .txt files. 
+
+// The main issues are practical (the halting problem -_-), which really is writing the interpreter and tools.
+
+// also I think I can avoid using indentation with the concept of empty and filled rows instead of columns.
+
+---
+
+>>> Entry 3:
+
+// I don't want to get stuck in development hell on this, but I sort of believe I have a problem to the halting
+// problem, I'm just not sure how to operationalize the solution or the algorithim. It requires async programming.
+
+// EDIT:
+// I ended up writing out an algorithm for taking tests, and it's fairly effective. It got me thru some amount 
+// of school anyway. And If I recall quickly, Roosevelt used a similar means to take tests as well.
+
+---
+
+>>> Entry 4:
+
+// There are a few ways I could implement NOTA. I'm not sure how I'll do this exactly yet but the
+// syntax and grammar, vocabulary and underlying logic are coming together.
+
+// Tho ideally I should use C++ as I spent the past while delving fairly deep and it's quite fresh
+// in my mind. I'll have to work on a few more algorithms of course in support of this goal but
+// I feel rather confident, as my current efforts have been fruitful, and I feel quite obligated,
+// if not empowered.

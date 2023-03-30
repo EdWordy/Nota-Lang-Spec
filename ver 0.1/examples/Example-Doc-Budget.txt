@@ -1,0 +1,59 @@
+> MONTHLY SUBSCRIPTIONS
+
+!! MONTHLY TOTAL = PERSONAL TOTAL + BUSINESS TOTAL;
+
+>> PERSONAL 
+
+>>> BANKING
+
+#] “String” : DATATYPE;
+1] CHEQUING ACCOUNT FEES : $9.99 CAD per month
+
+!! SUBTOTAL 1 = 1;
+
+=] SUBTOTAL 2;
+
+>>> SUBSCRIPTIONS
+
+#] “String” : DATATYPE;
+1] AMAZON PRIME : $11.09 CAD per month
+2] GITHUB : $4.0 USD per month 
+3] NETFLIX : $18.30 CAD per month 
+
+!! SUBTOTAL 2 = 1 + 2 + 3;
+
+=] SUBTOTAL 2;
+
+!! PERSONAL TOTAL = SUBTOTAL 1 + SUBTOTAL 2;
+
+=] PERSONAL TOTAL;
+
+---
+
+>> GENERAL BIZ
+
+>>> BITFORGE GAMES
+
+A] RBC Digital Choice Banking Account : $5.0 CAD per month
+
+!! SUBTOTAL D = A;
+
+=] SUBTOTAL D;
+
+>>> PI R&D
+
+A] null : 0
+
+!! SUBTOTAL E = A;
+
+=] SUBTOTAL E;
+
+---
+
+!! BIZ TOTAL = SUBTOTAL D + E;
+
+=] BIZ TOTAL;
+
+---
+
+=] MONTHLY TOTAL;

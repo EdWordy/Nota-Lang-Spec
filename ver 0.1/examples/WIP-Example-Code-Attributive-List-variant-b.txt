@@ -1,0 +1,7 @@
+> Attributive List
+
+BLIST List 1;
+Attribute 1.1, ..., Attribute 1.n
+-List item 1:1
+...
+-List item 1:n
