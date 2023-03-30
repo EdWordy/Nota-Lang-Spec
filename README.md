@@ -1,5 +1,7 @@
 # Nota-Lang-Spec
-A markdown language with a litte extra capability. Written in C++.
+A markdown language with a litte extra capability. 
+
+Written in C++.
 
 ---
 
