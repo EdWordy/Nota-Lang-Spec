@@ -1,0 +1,7 @@
+WELL WELL WELL
+5 + 10
+
+"Okay"
+
+WELL
+"HELLO"

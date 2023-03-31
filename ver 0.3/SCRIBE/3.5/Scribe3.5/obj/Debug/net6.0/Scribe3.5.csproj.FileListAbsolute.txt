@@ -1,0 +1,15 @@
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.csproj.AssemblyReference.cache
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.AssemblyInfoInputs.cache
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.AssemblyInfo.cs
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.csproj.CoreCompileInputs.cache
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\bin\Debug\net6.0\Scribe3.5.exe
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\bin\Debug\net6.0\Scribe3.5.deps.json
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\bin\Debug\net6.0\Scribe3.5.runtimeconfig.json
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\bin\Debug\net6.0\Scribe3.5.dll
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\bin\Debug\net6.0\Scribe3.5.pdb
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.dll
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\refint\Scribe3.5.dll
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.pdb
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\Scribe3.5.genruntimeconfig.cache
+E:\Dev\source\repos\csharp\Scribe3.5\Scribe3.5\obj\Debug\net6.0\ref\Scribe3.5.dll
