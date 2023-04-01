@@ -1,0 +1,9 @@
+int z = 5
+
+func int myFunc (int A, int B)
+A + B = int C
+return C
+
+if (D == E)
+F = 5
+print F
