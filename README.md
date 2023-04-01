@@ -1,20 +1,14 @@
 # Nota-Lang-Spec
 A markdown language with a litte extra capability. 
 
-Written in C++.
-
 ---
 
 ### Features
 1) ...
-
----
-
-### Version
-
-Version: 
-
-Date:
+2)
+3) 
 
 ---
 Note:
+
+Alternate versions written in both c# and c++.
