@@ -176,11 +176,11 @@
                     }
                     if (identifier == "str")
                     {
-                        return new Token(TokenType.StrKeyword, identifier);
+                        return new Token(TokenType.Keyword, identifier);
                     }
                     if (identifier == "bool")
                     {
-                        return new Token(TokenType.BoolKeyword, identifier);
+                        return new Token(TokenType.Keyword, identifier);
                     }
                     if (identifier == "return")
                     {
