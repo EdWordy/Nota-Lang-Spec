@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Scribe361
+﻿namespace Scribe361
 {
+    /// <summary>
+    ///  A simple class representing the parser which takes 
+    ///  an input of tokens and turns them into an AST.
+    /// </summary>
+
     public class Parser
     {
         private Token _token;
@@ -47,8 +46,9 @@ namespace Scribe361
             }
             else if (_token.Type == TokenType.Identifier)
             {
-                node = new AstIdentifier(_token.Value);
+                node = new AstIdentifier(_token.Value);                
                 node.Value = _token.Value;
+                SemanticAnalyzer.DefineIdentifier(_token.Value);
                 Consume(TokenType.Identifier);
             }
             else if (_token.Type == TokenType.Operator)
@@ -75,24 +75,18 @@ namespace Scribe361
                 node.Value = _token.Value;
                 Consume(TokenType.ReturnKeyword);
             }
+            else if (_token.Type == TokenType.VoidKeyword)
+            {
+                node = new AstVoidKeyword(_token.Value);
+                node.Value = _token.Value;
+                Consume(TokenType.VoidKeyword);
+            }
             else
             {
                 throw new InvalidOperationException($"Unexpected token: {_token}");
             }
 
             return node;
-        }
-
-        private AstBlock ParseBlock()
-        {
-            AstBlock block = new AstBlock();
-
-            while (_token.Type != TokenType.NewLine && _token.Type != TokenType.EOF)
-            {
-                block.Add(ParseStatement());
-            }
-
-            return block;
         }
 
         private AstNode ParseVariableDeclaration()
@@ -110,7 +104,6 @@ namespace Scribe361
             return new AstVariableDeclaration(dataType, identifier, assignmentExpression);
         }
 
-
         private AstNode ParseFuncDeclaration()
         {
             Consume(TokenType.Keyword); // Consume 'func' keyword
@@ -127,6 +120,7 @@ namespace Scribe361
 
                 while (_token.Type != TokenType.CloseParenthesis && _token.Type != TokenType.EOF)
                 {
+                    
                     AstNode paramType = ParseExpression(); // Parse parameter type keyword
                     AstNode paramName = ParseExpression(); // Parse parameter name identifier
 
@@ -141,7 +135,52 @@ namespace Scribe361
                 Consume(TokenType.CloseParenthesis);
             }
 
-            return new AstStatement(new List<AstNode> { new AstKeyword("func"), returnType, funcName, new AstParametersList(parameters) });
+            if (_token.Type == TokenType.NewLine)
+                Consume(TokenType.NewLine);
+            if (_token.Type == TokenType.CarriageReturn)
+                Consume(TokenType.CarriageReturn);
+
+            AstBlock block = ParseFunctionBody();
+
+            return new AstFunctionDeclaration(returnType, funcName, parameters, block);
+        }
+
+        private AstBlock ParseFunctionBody()
+        {
+            AstBlock block = new AstBlock();
+
+            while (_token.Type != TokenType.EOF)
+            {
+                // Ignore single line comments
+                if (_token.Type == TokenType.Comment)
+                {
+                    Consume(TokenType.Comment);
+                    continue;
+                }
+
+                if (_token.Type == TokenType.CarriageReturn)
+                {
+                    Consume(TokenType.CarriageReturn);
+                    Consume(TokenType.NewLine);
+                }
+
+                if (_token.Type == TokenType.NewLine)
+                {
+                    Consume(TokenType.NewLine);
+                }
+                else
+                {
+                    block.Add(ParseStatement());
+                }
+
+                if (_token.Type == TokenType.ReturnKeyword)
+                {
+                    block.Add(ParseStatement());
+                    break;
+                }
+            }
+
+            return block;
         }
 
         private AstNode ParseStatement()
@@ -160,7 +199,7 @@ namespace Scribe361
 
             if (_token.Type == TokenType.If && _token.Value.ToLower() == "if")
             {
-                AstIdentifier ifKeyword = new AstIdentifier(_token.Value);
+                AstKeyword ifKeyword = new AstKeyword(_token.Value);
                 Consume(TokenType.If);
 
                 Consume(TokenType.OpenParenthesis);
@@ -177,11 +216,12 @@ namespace Scribe361
                 Consume(TokenType.CloseParenthesis);
 
                 AstIfStatement ifStatement = new AstIfStatement(ifKeyword, leftIdentifier, operatorNode, rightIdentifier);
+
                 nodes.Add(ifStatement);
             }
             else
             {
-                while (_token.Type != TokenType.NewLine && _token.Type != TokenType.EOF && _token.Type != TokenType.CloseBrace)
+                while (_token.Type != TokenType.NewLine && _token.Type != TokenType.EOF && _token.Type != TokenType.CarriageReturn)
                 {
                     nodes.Add(ParseExpression());
                 }
@@ -190,14 +230,36 @@ namespace Scribe361
             return new AstStatement(nodes);
         }
 
+        private AstBlock ParseBlock()
+        {
+            AstBlock block = new AstBlock();
+
+            // TODO: do stuff ...
+
+            return block;
+        }
+
         public AstNode Parse()
         {
             List<AstBlock> blocks = new List<AstBlock>();
+
             AstBlock block = new AstBlock();
 
             while (_token.Type != TokenType.EOF)
             {
-                block.Add(ParseStatement());
+                // Ignore single line comments
+                if (_token.Type == TokenType.Comment)
+                {
+                    Consume(TokenType.Comment);
+                    continue;
+                }
+
+                AstNode node = ParseStatement();
+
+                if (node != null) 
+                {
+                    block.Add(node);
+                }
 
                 if (_token.Type == TokenType.EOF)
                 {
@@ -229,3 +291,4 @@ namespace Scribe361
         }
     }
 }
+    

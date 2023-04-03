@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Scribe361
+﻿namespace Scribe361
 {
+    /// <summary>
+    /// The class which represents the lexical analyzer 
+    /// 1which tokenizes input and produces a stream of tokens.
+    /// </summary>
+
     public class Lexer
     {
         private string _input;
@@ -29,6 +28,19 @@ namespace Scribe361
             else
             {
                 _currentChar = _input[_position];
+            }
+        }
+
+        private char Peek()
+        {
+            int peekPosition = _position + 1;
+            if (peekPosition > _input.Length - 1)
+            {
+                return '\0';
+            }
+            else
+            {
+                return _input[peekPosition];
             }
         }
 
@@ -59,19 +71,6 @@ namespace Scribe361
                     Advance();
                 }
                 Advance(); // Consume '/'
-            }
-        }
-
-        private char Peek()
-        {
-            int peekPosition = _position + 1;
-            if (peekPosition > _input.Length - 1)
-            {
-                return '\0';
-            }
-            else
-            {
-                return _input[peekPosition];
             }
         }
 
@@ -173,17 +172,37 @@ namespace Scribe361
                     }
                     if (identifier == "int")
                     {
-                        return new Token(TokenType.Keyword, identifier);
+                        return new Token(TokenType.IntKeyword, identifier);
+                    }
+                    if (identifier == "str")
+                    {
+                        return new Token(TokenType.StrKeyword, identifier);
+                    }
+                    if (identifier == "bool")
+                    {
+                        return new Token(TokenType.BoolKeyword, identifier);
                     }
                     if (identifier == "return")
                     {
                         return new Token(TokenType.ReturnKeyword, identifier);
+                    }
+                    if (identifier == "void")
+                    {
+                        return new Token(TokenType.VoidKeyword, identifier);
                     }
                     if (identifier == "print")
                     {
                         return new Token(TokenType.Keyword, identifier);
                     }
                     if (identifier == "func")
+                    {
+                        return new Token(TokenType.Keyword, identifier);
+                    }
+                    if (identifier == "true")
+                    {
+                        return new Token(TokenType.Keyword, identifier);
+                    }
+                    if (identifier == "false")
                     {
                         return new Token(TokenType.Keyword, identifier);
                     }

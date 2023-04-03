@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Scribe361
+﻿namespace Scribe361
 {
+    /// <summary>
+    /// The enum representing different token types.
+    /// </summary>
+
     public enum TokenType
     {
         EOF,
@@ -15,6 +13,7 @@ namespace Scribe361
         Number,
         String,
         Operator,
+        Comment,
         OpenParenthesis,
         CloseParenthesis,
         OpenBrace,
@@ -22,6 +21,7 @@ namespace Scribe361
         If,
         Keyword,
         ReturnKeyword,
+        VoidKeyword,
         FuncKeyword,
         IntKeyword,
         StrKeyword,
@@ -29,6 +29,10 @@ namespace Scribe361
         Semicolon,
         Comma
     }
+
+    /// <summary>
+    /// The class representing a token.
+    /// </summary>
 
     public class Token
     {

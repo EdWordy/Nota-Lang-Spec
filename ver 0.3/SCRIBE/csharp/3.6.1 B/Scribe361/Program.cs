@@ -17,7 +17,14 @@
             Lexer lexer = new Lexer(input);
             Parser parser = new Parser(lexer);
             AstNode ast = parser.Parse();
+            SemanticAnalyzer analyzer = new SemanticAnalyzer(); 
             AstPrinter.Print(ast);
+            analyzer.Analyze(ast);
+
+            foreach (string s in SemanticAnalyzer.DefinedIdentifiers)
+            {
+                Console.WriteLine("Identifier Found: " + s);
+            }
         }
     }
 
@@ -25,6 +32,10 @@
     
     // static helper methods 
     
+    /// <summary>
+    /// A simple class to handle printing the AST to console.
+    /// </summary>
+
     public static class AstPrinter
     {
         public static void Print(AstNode node)
@@ -67,8 +78,19 @@
                     Console.WriteLine($"{indentation2}Identifier: {variableDeclaration.Identifier.Value}");
                     if ( variableDeclaration.AssignmentExpression != null )
                         Console.WriteLine($"{indentation2}Value:  {variableDeclaration.AssignmentExpression.Value}");
-
-
+                    break;
+                case AstFunctionDeclaration functionDeclaration:
+                    Console.WriteLine($"{indentation}ReturnType: {functionDeclaration.ReturnType.Value}");
+                    Console.WriteLine($"{indentation}FuncName: {functionDeclaration.FunctionName.Value}");
+                    foreach (AstNode param in functionDeclaration.Parameters)
+                    {
+                        PrintNode(param, indent + 2);
+                    }
+                    Console.WriteLine($"{indentation}FuncBody:");
+                    foreach (AstNode funcNode in functionDeclaration.FunctionBody.Statements)
+                    {
+                        PrintNode(funcNode, indent + 2);
+                    }
                     break;
                 case AstBlock block:
                     Console.Write($"{indentation}Block: \n");

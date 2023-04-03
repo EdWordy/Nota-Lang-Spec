@@ -1,10 +1,27 @@
+// NOTA
+// MIT License
+//
+// INTRO
+// There currently isn't much of a symbol table for NOTA
+// but it's basically fleshed out enough to start developing 
+// it more seriously. Below are some code examples to get you 
+// started with how to write in NOTA.
+
 int z = 5
 
+str msg = "Hello"
+
+bool myBool = true
+
 func int myFunc (int A, int B)
-int c
+int C
 A + B = C
 return C
 
+int D = 5
+
+int E = 5
+
 if (D == E)
 int F = 5
-print F
+print msg

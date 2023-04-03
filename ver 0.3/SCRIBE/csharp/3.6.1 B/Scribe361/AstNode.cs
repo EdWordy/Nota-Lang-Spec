@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Scribe361
+﻿namespace Scribe361
 {
-    public abstract class AstNode 
+    /// <summary>
+    /// The base class representing a node in the AST.
+    /// </summary>
+
+    public abstract class AstNode
     {
         public string Value { get; set; }
     }
@@ -15,8 +13,6 @@ namespace Scribe361
 
     public class AstNumber : AstNode
     {
-        public string Value { get; }
-
         public AstNumber(string value)
         {
             Value = value;
@@ -25,8 +21,6 @@ namespace Scribe361
 
     public class AstString : AstNode
     {
-        public string Value { get; }
-
         public AstString(string value)
         {
             Value = value;
@@ -37,7 +31,6 @@ namespace Scribe361
 
     public class AstIdentifier : AstNode
     {
-        public string Value { get; }
 
         public AstIdentifier(string value)
         {
@@ -46,8 +39,7 @@ namespace Scribe361
     }
 
     public class AstOperator : AstNode
-    {
-        public string Value { get; }
+    { 
 
         public AstOperator(string value)
         {
@@ -59,8 +51,6 @@ namespace Scribe361
 
     public class AstKeyword : AstNode
     {
-        public string Value { get; }
-
         public AstKeyword(string value)
         {
             Value = value;
@@ -69,9 +59,15 @@ namespace Scribe361
 
     public class AstReturnKeyword : AstNode
     {
-        public string Value { get; }
-
         public AstReturnKeyword(string value)
+        {
+            Value = value;
+        }
+    }
+
+    public class AstVoidKeyword : AstNode
+    {
+        public AstVoidKeyword(string value)
         {
             Value = value;
         }
@@ -79,8 +75,6 @@ namespace Scribe361
 
     public class AstIntKeyword : AstNode
     {
-        public string Value { get; }
-
         public AstIntKeyword(string value)
         {
             Value = value;
@@ -89,8 +83,6 @@ namespace Scribe361
 
     public class AstStrKeyword : AstNode
     {
-        public string Value { get; }
-
         public AstStrKeyword(string value)
         {
             Value = value;
@@ -138,12 +130,12 @@ namespace Scribe361
 
     public class AstIfStatement : AstNode
     {
-        public AstIdentifier IfKeyword { get; }
+        public AstKeyword IfKeyword { get; }
         public AstIdentifier LeftIdentifier { get; }
         public AstOperator Operator { get; }
         public AstIdentifier RightIdentifier { get; }
 
-        public AstIfStatement(AstIdentifier ifKeyword, AstIdentifier leftIdentifier, AstOperator operatorNode, AstIdentifier rightIdentifier)
+        public AstIfStatement(AstKeyword ifKeyword, AstIdentifier leftIdentifier, AstOperator operatorNode, AstIdentifier rightIdentifier)
         {
             IfKeyword = ifKeyword;
             LeftIdentifier = leftIdentifier;
@@ -175,6 +167,22 @@ namespace Scribe361
             DataType = dataType;
             Identifier = identifier;
             AssignmentExpression = assignmentExpression;
+        }
+    }
+
+    public class AstFunctionDeclaration : AstNode
+    {
+        public AstNode ReturnType { get; }
+        public AstNode FunctionName { get; }
+        public List<AstNode> Parameters { get; }
+        public AstBlock FunctionBody { get; }
+
+        public AstFunctionDeclaration(AstNode returnType, AstNode functionName, List<AstNode> parameters, AstBlock functionBody)
+        {
+            ReturnType = returnType;
+            FunctionName = functionName;
+            Parameters = parameters;
+            FunctionBody = functionBody;
         }
     }
 }
