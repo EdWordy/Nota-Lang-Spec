@@ -1,4 +1,4 @@
-# Nota-Lang-Spec
+# NOTA language specification
 A markdown language with a litte extra capability. 
 
 ---
@@ -17,6 +17,10 @@ A markdown language with a litte extra capability.
 -Ver 0.3 contains the working prototype models of the lang. 
 
 -Model 3.6.1 B for C# and model Cpp02 for C++ are the best available representations of the language. 
+
+#### Version
+
+????
 
 
 ---
