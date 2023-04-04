@@ -13,7 +13,9 @@ A markdown language with a litte extra capability.
 ### Directory
 
 -Ver 0.1 and 0.2 contain the previous designs and models.
+
 -Ver 0.3 contains the working prototype models of the lang. 
+
 -Model 3.6.1 B for C# and model Cpp02 for C++ are the best available representations of the language. 
 
 
