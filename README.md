@@ -11,8 +11,7 @@ A toy programming language with a litte extra capability.
 ---
 
 ### Directory
-
-1)Ver 0.1 and 0.2 contain the previous designs and models.
+1) Ver 0.1 and 0.2 contain the previous designs and models.
 2) Ver 0.3 contains the working prototype models of the lang. 
 
 Note:
