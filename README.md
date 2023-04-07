@@ -1,5 +1,5 @@
 # NOTA language specification
-A language with a litte extra capability. 
+A toy programming language with a litte extra capability. 
 
 ---
 
