@@ -20,10 +20,4 @@ A toy programming language with a litte extra capability.
 
 #### Version
 
-????
-
-
----
-Note:
-
-Designed with the help of GPT-4 which allowed for iterative, alternate versions written in both C# and C++.
+0.3.0
