@@ -1,5 +1,5 @@
 # NOTA language specification
-A markdown language with a litte extra capability. 
+A language with a litte extra capability. 
 
 ---
 
