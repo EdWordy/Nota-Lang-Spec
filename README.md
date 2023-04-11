@@ -1,5 +1,5 @@
 # NOTA language specification
-A toy programming language with a litte extra capability. 
+A toy programming language with a litte extra capability. NOTA is somewhat like python with a simple and readable if spartan syntax, but eschews identation for line breaks.
 
 ---
 
@@ -14,11 +14,11 @@ A toy programming language with a litte extra capability.
 1) Ver 0.1 and 0.2 contain the previous designs and models.
 2) Ver 0.3 contains the working prototype models of the lang. 
 
-Csharp
+A) Csharp
 
 -Model 3.6.1 B - Generated largely by GPT-4 through ChatGPT and extended via additional prompts/work. Currently contains a lexer, parser, and the beginnings of a semantic analyzer.
 
-Cplusplus
+B) Cplusplus
 
 -Model ThreePointZero - Coded from scratch by yours truly. Currently contains a lexer and parser.
 
