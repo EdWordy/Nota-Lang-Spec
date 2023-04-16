@@ -1,0 +1,21 @@
+// NOTA-CPP-3Point0
+// MIT License
+
+// variable declarations
+
+int z = 5
+str msg = "Hello"
+bool myBool = true
+
+// function declarations
+
+func int myFunc int A int B
+return A + B
+
+// control structures
+
+int D = 5
+int E = 5
+
+if D == E
+print msg

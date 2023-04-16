@@ -1,0 +1,5 @@
+// variable declarations
+
+int z = 5
+str msg = "Hello"
+bool myBool = true

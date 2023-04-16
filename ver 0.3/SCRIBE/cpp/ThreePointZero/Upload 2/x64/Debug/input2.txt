@@ -1,0 +1,6 @@
+// function declarations
+
+func int myFunc int A int B
+return A + B
+
+str msg = "Hi hey hello"
