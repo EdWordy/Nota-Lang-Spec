@@ -3,7 +3,7 @@ A toy programming language with a litte extra capability. NOTA is somewhat like 
 
 ---
 
-### Features
+### Intended Features
 1) Simple, familiar, english-like syntax
 2) Powerful set of standard features
 3) ...
