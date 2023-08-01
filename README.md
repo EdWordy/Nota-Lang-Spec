@@ -11,8 +11,8 @@ A toy programming language with a litte extra capability. NOTA is somewhat like 
 ---
 
 ### Directory
-1) Ver 0.1 and 0.2 contain the previous designs and models.
-2) Ver 0.3 contains the working prototype models of the lang. 
+1) prior to the latest directory, Ver 0.x contain the previous designs and models.
+2) Ver 0.4 contains the working prototype models of the lang. 
 
 A) Csharp
 
