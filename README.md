@@ -29,4 +29,4 @@ Model 3.6.1 B for C#, and model ThreePointZero for C++ are the best available re
 
 #### Version
 
-0.3.0
+0.4.0
