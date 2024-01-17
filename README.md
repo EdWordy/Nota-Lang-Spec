@@ -1,5 +1,7 @@
 # NOTA language specification
-A toy programming language with a little extra capability. NOTA is somewhat like python with a simple and readable, if spartan syntax, but eschews identation for line breaks.
+A toy programming language with a little extra capability. 
+
+NOTA is somewhat like python with a simple and readable, if spartan syntax, but eschews identation for line breaks.
 
 ---
 
